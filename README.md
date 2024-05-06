@@ -7,5 +7,5 @@ Dari potongan output tersebut, terlihat bahwa fungsi async akan berjalan diluar 
 - Sebelum menghapus kode `drop(spawner);`
 ![alt text](adpro_1.3_before.jpg)
 - Setelah menghapus kode `drop(spawner);`
-![alt text](adpro_1.3.jpg)
+![alt text](adpro_1.3.jpg) <br>
 Potongan output diatas terjadi saat kode `drop(spawner);` dimatikan. Dalam kasus diimplementasikannya multiple spawn, akan  lebih banyak task yang masuk kedalam task sender dimana task tersebut akan diberlakukan seperti sebuah message queue. Saat kode `drop(spawner);` tersebut dimatikan, program akan terus berjalan karena menganggap bahwa masih akan terjadi pengiriman data yang dilakukan oleh spawner. Oleh karena itu, kode `drop(spawner);` perlu diimplementasikan guna menandakan interaksi sudah selesai dan spawner akan ditutup.
