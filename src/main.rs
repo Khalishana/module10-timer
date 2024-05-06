@@ -105,7 +105,7 @@ fn main() {
         println!("Hana's PC: done!");
     });
 
-    //println!("Hana's komputer: hey hey");
+    println!("Hana's komputer: hey hey");
     // Drop the spawner so that our executor knows it is finished and won't
     // receive more incoming tasks to run.
     drop(spawner);
